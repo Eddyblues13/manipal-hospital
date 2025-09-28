@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Services - Manipal Teaching Hospital</title>
+    <meta name="description" content="Comprehensive medical services including diagnostics, treatments, and specialized care at Manipal Teaching Hospital.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="Manipal Teaching Hospital" class="logo-img">
+                <span class="brand-text">Manipal Teaching Hospital</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="departments.html">Departments</a></li>
+                            <li><a class="dropdown-item active" href="services.html">Medical Services</a></li>
+                            <li><a class="dropdown-item" href="emergency.html">Emergency Care</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="patients.html">Patient Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academics.html">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2" href="appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-3">Medical Services</h1>
+                    <p class="lead">Comprehensive healthcare services with advanced medical technology</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Home</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Medical Services</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnostic Services -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Diagnostic Services</h2>
+                <p class="section-subtitle">Advanced diagnostic capabilities for accurate medical assessment</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-feature-card">
+                        <div class="service-icon">
+                            <i class="fas fa-x-ray"></i>
+                        </div>
+                        <h4>Radiology & Imaging</h4>
+                        <p>Comprehensive imaging services including MRI, CT Scan, X-Ray, Ultrasound, and Mammography with advanced digital technology.</p>
+                        <ul class="service-list">
+                            <li>Digital X-Ray</li>
+                            <li>CT Scan (64 Slice)</li>
+                            <li>MRI (1.5 Tesla)</li>
+                            <li>Ultrasound</li>
+                            <li>Mammography</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-feature-card">
+                        <div class="service-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h4>Laboratory Services</h4>
+                        <p>State-of-the-art pathology laboratory with automated systems for accurate and timely test results.</p>
+                        <ul class="service-list">
+                            <li>Clinical Pathology</li>
+                            <li>Biochemistry</li>
+                            <li>Hematology</li>
+                            <li>Microbiology</li>
+                            <li>Histopathology</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-feature-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h4>Cardiac Diagnostics</h4>
+                        <p>Comprehensive cardiac assessment with advanced echocardiography and stress testing facilities.</p>
+                        <ul class="service-list">
+                            <li>Echocardiography</li>
+                            <li>Stress Test</li>
+                            <li>Holter Monitoring</li>
+                            <li>ECG</li>
+                            <li>TMT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treatment Services -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Treatment Services</h2>
+                <p class="section-subtitle">Advanced medical treatments and surgical procedures</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="treatment-card">
+                        <div class="treatment-header">
+                            <i class="fas fa-procedures"></i>
+                            <h4>Surgical Services</h4>
+                        </div>
+                        <div class="treatment-content">
+                            <p>Comprehensive surgical care across all specialties with advanced operating theaters and post-operative care.</p>
+                            <div class="treatment-features">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Minimally Invasive Surgery</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Robotic Surgery</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Day Care Surgery</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Transplant Surgery</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="treatment-card">
+                        <div class="treatment-header">
+                            <i class="fas fa-pills"></i>
+                            <h4>Medical Services</h4>
+                        </div>
+                        <div class="treatment-content">
+                            <p>Comprehensive medical management for various health conditions with specialized clinics and treatment protocols.</p>
+                            <div class="treatment-features">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Chronic Disease Management</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Critical Care Medicine</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Pain Management</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="feature">
+                                            <i class="fas fa-check-circle text-primary"></i>
+                                            <span>Rehabilitation Services</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="images/logo-white.jpg" alt="Manipal Teaching Hospital" class="footer-logo mb-3">
+                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Patient Care</h6>
+                    <ul class="footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="patients.html">Patient Information</a></li>
+                        <li><a href="emergency.html">Emergency Care</a></li>
+                        <li><a href="reports.html">Lab Reports</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="footer-title">Contact Information</h6>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Medical Center Road, Manipal, Karnataka 576104</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 820 2922201</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@manipalhospital.com</span>
+                        </div>
+                        <div class="contact-item emergency">
+                            <i class="fas fa-ambulance"></i>
+                            <span>Emergency: +91 820 2922108</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 Manipal Teaching Hospital. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
