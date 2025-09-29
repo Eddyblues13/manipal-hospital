@@ -76,75 +76,156 @@ h6 {
   margin: 0 auto;
 }
 
-/* Navigation */
+/* Navigation - Fixed Version */
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
-  transition: all 0.3s ease;
-  padding: 1rem 0;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    padding: 0.75rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
 }
 
 .navbar.scrolled {
-  background: var(--white);
-  padding: 0.5rem 0;
+    background: var(--white) !important;
+    padding: 0.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  color: var(--primary-color) !important;
-  text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    text-decoration: none;
 }
 
 .logo-img {
-  height: 40px;
-  margin-right: 10px;
+    height: 40px;
+    margin-right: 10px;
 }
 
 .brand-text {
-  font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
+    font-family: "Playfair Display", serif;
 }
 
 .navbar-nav .nav-link {
-  font-weight: 500;
-  color: var(--text-dark) !important;
-  margin: 0 0.5rem;
-  transition: color 0.3s ease;
-  position: relative;
+    font-weight: 500;
+    color: var(--text-dark) !important;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0.75rem !important;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-  color: var(--primary-color) !important;
+    color: var(--primary-color) !important;
 }
 
 .navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 2px;
-  background: var(--primary-color);
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover::after,
 .navbar-nav .nav-link.active::after {
-  width: 100%;
+    width: 80%;
 }
 
 .navbar-toggler {
-  border: none;
-  padding: 0.25rem 0.5rem;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
 }
 
 .navbar-toggler:focus {
-  box-shadow: none;
+    box-shadow: none;
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Dropdown Menu */
+.navbar-nav .dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: 8px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+}
+
+.navbar-nav .dropdown-item {
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item:focus {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Adjust hero section to account for fixed navbar */
+.hero-section {
+    padding-top: 80px; /* Add padding to account for fixed navbar */
+}
+
+/* Responsive Design for Navbar */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: var(--white);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        box-shadow: var(--shadow);
+    }
+    
+    .navbar-nav .nav-link {
+        margin: 0;
+        padding: 0.75rem 0 !important;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+    
+    .navbar-nav .nav-link::after {
+        display: none; /* Hide underline on mobile */
+    }
+    
+    .navbar-nav .dropdown-menu {
+        box-shadow: none;
+        border-left: 3px solid var(--primary-color);
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-section {
+        padding-top: 70px; /* Slightly less padding on mobile */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-brand .brand-text {
+        font-size: 1rem; /* Smaller text on mobile */
+    }
+    
+    .logo-img {
+        height: 35px; /* Smaller logo on mobile */
+    }
 }
 
 /* Buttons */
@@ -809,11 +890,11 @@ a:focus {
     padding: 0.75rem;
     background: #fff3cd;
     border-radius: 6px;
-    border-left: 4px solid var(--warning);
+    border-left: 4px solid #ffc107;
 }
 
 .emergency-contacts .contact-item i {
-    color: var(--danger);
+    color: #dc3545;
     margin-right: 0.75rem;
     margin-top: 0.2rem;
 }
@@ -837,7 +918,7 @@ a:focus {
     color: white;
     padding: 1.5rem;
     display: flex;
-    justify-content: between;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -1293,4 +1374,156 @@ a:focus {
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, 0.8);
+}
+
+/* Additional styles for about page header */
+.page-header {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../images/hero-pattern.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Nursing Courses Section */
+.nursing-courses-section {
+    padding: 5rem 0;
+    background: var(--bg-light);
+}
+
+.course-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.course-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.course-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-duration {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.course-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.course-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.course-features li:before {
+    content: "✓";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.course-features li:last-child {
+    border-bottom: none;
+}
+
+/* Nursing Specializations */
+.specialization-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.specialization-card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.specialization-card:hover {
+    transform: translateY(-3px);
+}
+
+.specialization-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .page-header {
+        padding-top: 90px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-header {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    
+    .page-header .breadcrumb {
+        justify-content: center !important;
+        margin-top: 1rem;
+    }
 }
