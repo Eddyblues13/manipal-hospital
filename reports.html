@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Reports & Medical Records | Manipal Teaching Hospital</title>
+    <meta name="description" content="Access your lab reports and medical records online at Manipal Teaching Hospital. Secure and convenient access to your test results.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="Manipal Teaching Hospital" class="logo-img">
+                <span class="brand-text">Manipal Teaching Hospital</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="departments.html">Departments</a></li>
+                            <li><a class="dropdown-item" href="services.html">Medical Services</a></li>
+                            <li><a class="dropdown-item" href="emergency.html">Emergency Care</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="patients.html">Patient Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academics.html">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2" href="appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold">Lab Reports & Medical Records</h1>
+                    <p class="lead mb-0">Secure access to your test results and medical records</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end justify-content-start">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Reports</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reports Access Section -->
+    <section class="reports-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0">
+                        <div class="card-header bg-light py-4">
+                            <h3 class="card-title mb-0 text-center">Access Your Medical Reports</h3>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="alert alert-info">
+                                <i class="fas fa-info-circle me-2"></i>
+                                Please enter your credentials to securely access your lab reports and medical records.
+                            </div>
+                            
+                            <form id="reportAccessForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="patientId" class="form-label">Patient ID</label>
+                                        <input type="text" class="form-control" id="patientId" placeholder="Enter your Patient ID" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dateOfBirth" required>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="accessCode" class="form-label">Access Code</label>
+                                        <input type="password" class="form-control" id="accessCode" placeholder="Enter your access code" required>
+                                        <div class="form-text">
+                                            Your access code was provided at the time of your test registration.
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary w-100 py-2">
+                                            <i class="fas fa-lock-open me-2"></i>Access My Reports
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div class="mt-4 pt-3 border-top">
+                                <h5 class="mb-3">Having trouble accessing your reports?</h5>
+                                <div class="d-flex flex-column flex-md-row gap-2">
+                                    <a href="contact.html" class="btn btn-outline-primary">
+                                        <i class="fas fa-phone-alt me-2"></i>Contact Support
+                                    </a>
+                                    <a href="patients.html" class="btn btn-outline-secondary">
+                                        <i class="fas fa-question-circle me-2"></i>Help & FAQs
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report Types Section -->
+    <section class="report-types py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Available Report Types</h2>
+                <p class="section-subtitle">Access different types of medical reports and test results</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-type-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="report-icon mb-3">
+                            <i class="fas fa-flask fa-3x text-primary"></i>
+                        </div>
+                        <h5>Laboratory Tests</h5>
+                        <p>Blood tests, urine analysis, biochemistry, hematology, and microbiology reports</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-type-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="report-icon mb-3">
+                            <i class="fas fa-x-ray fa-3x text-primary"></i>
+                        </div>
+                        <h5>Radiology Reports</h5>
+                        <p>X-rays, CT scans, MRI, ultrasound, and other imaging study reports</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-type-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="report-icon mb-3">
+                            <i class="fas fa-heartbeat fa-3x text-primary"></i>
+                        </div>
+                        <h5>Cardiac Tests</h5>
+                        <p>ECG, echocardiography, stress tests, and other cardiac investigation reports</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="report-type-card text-center p-4 bg-white rounded shadow-sm h-100">
+                        <div class="report-icon mb-3">
+                            <i class="fas fa-file-medical fa-3x text-primary"></i>
+                        </div>
+                        <h5>Medical Records</h5>
+                        <p>Discharge summaries, consultation notes, and comprehensive medical history</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">How to Access Your Reports</h2>
+                <p class="section-subtitle">Simple steps to view and download your medical reports</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="step-card text-center p-4">
+                        <div class="step-number">1</div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-user-circle fa-2x text-primary"></i>
+                        </div>
+                        <h5>Enter Your Details</h5>
+                        <p>Provide your Patient ID, date of birth, and the access code provided during registration</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="step-card text-center p-4">
+                        <div class="step-number">2</div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-search fa-2x text-primary"></i>
+                        </div>
+                        <h5>View Your Reports</h5>
+                        <p>Browse through your available reports, organized by date and test type</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="step-card text-center p-4">
+                        <div class="step-number">3</div>
+                        <div class="step-icon mb-3">
+                            <i class="fas fa-download fa-2x text-primary"></i>
+                        </div>
+                        <h5>Download or Print</h5>
+                        <p>Download digital copies or print your reports for personal records or sharing with doctors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Report FAQs Section -->
+    <section class="faq-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about accessing medical reports</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="reportsFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    How long does it take for test results to be available online?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#reportsFAQ">
+                                <div class="accordion-body">
+                                    Most routine laboratory test results are available within 24-48 hours. Specialized tests may take longer, typically 3-7 days. Radiology reports are usually available within 24 hours for most imaging studies.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    What if I forget my Patient ID or access code?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#reportsFAQ">
+                                <div class="accordion-body">
+                                    If you've forgotten your Patient ID or access code, please contact our patient support team at +91 820 2922201 or visit the patient services desk at the hospital. You'll need to verify your identity to receive your credentials.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    Can I share my reports with another doctor?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#reportsFAQ">
+                                <div class="accordion-body">
+                                    Yes, you can download and share your reports with other healthcare providers. We recommend discussing your results with your primary physician first for proper interpretation and context.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    How long are my reports stored in the system?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#reportsFAQ">
+                                <div class="accordion-body">
+                                    We maintain digital records of all test results for a minimum of 7 years as per medical record retention guidelines. Some critical reports may be stored indefinitely as part of your permanent medical record.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    Is my medical information secure?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#reportsFAQ">
+                                <div class="accordion-body">
+                                    Yes, we employ industry-standard security measures including data encryption, secure servers, and strict access controls to protect your personal health information. Your privacy is our priority.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Support Section -->
+    <section class="support-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Need Help With Your Reports?</h3>
+                    <p class="mb-4">Our patient support team is available to assist you with accessing your reports or answering any questions about your test results.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <div class="support-contact">
+                            <i class="fas fa-phone-alt text-primary me-2"></i>
+                            <strong>Phone:</strong> +91 820 2922201
+                        </div>
+                        <div class="support-contact">
+                            <i class="fas fa-envelope text-primary me-2"></i>
+                            <strong>Email:</strong> reports@manipalteachinghospital.com
+                        </div>
+                        <div class="support-contact">
+                            <i class="fas fa-clock text-primary me-2"></i>
+                            <strong>Hours:</strong> 8:00 AM - 8:00 PM (Mon-Sat)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-headset me-2"></i>Contact Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="images/logo-white.jpg" alt="Manipal Teaching Hospital" class="footer-logo mb-3">
+                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Patient Care</h6>
+                    <ul class="footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="patients.html">Patient Information</a></li>
+                        <li><a href="emergency.html">Emergency Care</a></li>
+                        <li><a href="reports.html">Lab Reports</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="footer-title">Contact Information</h6>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Medical Center Road, Manipal, Karnataka 576104</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 820 2922201</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@manipalteachinghospital.com</span>
+                        </div>
+                        <div class="contact-item emergency">
+                            <i class="fas fa-ambulance"></i>
+                            <span>Emergency: +91 820 2922108</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 Manipal Teaching Hospital. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Form submission handling
+        document.getElementById('reportAccessForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, this would validate credentials with a backend
+            // For demo purposes, we'll show a success message
+            alert('Credentials validated! Redirecting to your reports...');
+            // In a real implementation: window.location.href = 'patient-reports-dashboard.html';
+        });
+    </script>
+</body>
+</html>
