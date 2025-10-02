@@ -23,7 +23,9 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.jpg" alt="Manipal Teaching Hospital" class="logo-img">
+                <div class="logo-placeholder bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                    <i class="fas fa-hospital"></i>
+                </div>
                 <span class="brand-text">Manipal Teaching Hospital</span>
             </a>
             
@@ -92,53 +94,69 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title">Our Specialized Departments</h2>
-                <p class="section-subtitle">State-of-the-art medical care across all specialties</p>
+                <p class="section-subtitle">State-of-the-art medical care across all specialties with comprehensive diagnostic, therapeutic, and surgical capabilities. Our departments are equipped with the latest technology and staffed by experienced medical professionals dedicated to providing exceptional patient care.</p>
             </div>
             
             <!-- Cardiology -->
             <div class="department-detail mb-5" id="cardiology">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="department-content">
-                            <h3 class="department-title">Cardiology & Cardiac Surgery</h3>
-                            <p class="department-description">Our Cardiology Department provides comprehensive cardiac care with state-of-the-art diagnostic and therapeutic facilities. We specialize in both non-invasive and invasive cardiology procedures.</p>
-                            <div class="department-features">
-                                <h5>Services Offered:</h5>
-                                <ul>
-                                    <li>Cardiac Catheterization</li>
-                                    <li>Angioplasty & Stenting</li>
-                                    <li>Cardiac Bypass Surgery</li>
-                                    <li>Pacemaker Implantation</li>
-                                    <li>Echocardiography</li>
-                                    <li>Cardiac Rehabilitation</li>
-                                </ul>
+                            <div class="department-header mb-4">
+                                <div class="department-icon-large bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-heartbeat fa-lg"></i>
+                                </div>
+                                <h3 class="department-title d-inline-block">Cardiology & Cardiac Surgery</h3>
                             </div>
-                            <div class="department-stats">
+                            <p class="department-description">Our Cardiology Department provides comprehensive cardiac care with state-of-the-art diagnostic and therapeutic facilities. We specialize in both non-invasive and invasive cardiology procedures, offering complete heart care from prevention to complex surgical interventions. Our team of cardiologists and cardiac surgeons work collaboratively to provide personalized treatment plans for each patient.</p>
+                            <div class="department-features mb-4">
+                                <h5>Comprehensive Services Offered:</h5>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><strong>Cardiac Catheterization:</strong> Advanced diagnostic and interventional procedures</li>
+                                            <li><strong>Angioplasty & Stenting:</strong> Minimally invasive coronary interventions</li>
+                                            <li><strong>Cardiac Bypass Surgery:</strong> Coronary artery bypass grafting (CABG)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><strong>Pacemaker Implantation:</strong> Single and dual chamber devices</li>
+                                            <li><strong>Echocardiography:</strong> 2D, 3D, and stress echocardiography</li>
+                                            <li><strong>Cardiac Rehabilitation:</strong> Comprehensive post-treatment recovery programs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="department-stats bg-light p-4 rounded-3">
+                                <div class="row text-center">
+                                    <div class="col-md-3 col-6">
                                         <div class="stat">
-                                            <h4>500+</h4>
-                                            <p>Surgeries Annually</p>
+                                            <h4 class="text-primary">500+</h4>
+                                            <p>Cardiac Surgeries Annually</p>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-3 col-6">
                                         <div class="stat">
-                                            <h4>24/7</h4>
-                                            <p>Cath Lab</p>
+                                            <h4 class="text-primary">24/7</h4>
+                                            <p>Cath Lab Availability</p>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-3 col-6">
                                         <div class="stat">
-                                            <h4>98%</h4>
-                                            <p>Success Rate</p>
+                                            <h4 class="text-primary">98%</h4>
+                                            <p>Surgical Success Rate</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat">
+                                            <h4 class="text-primary">15+</h4>
+                                            <p>Cardiac Specialists</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="images/cardiology-department.jpg" alt="Cardiology Department" class="img-fluid rounded-3 shadow">
                     </div>
                 </div>
             </div>
@@ -146,74 +164,129 @@
             <!-- Neurology -->
             <div class="department-detail mb-5" id="neurology">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 order-lg-2">
+                    <div class="col-lg-12">
                         <div class="department-content">
-                            <h3 class="department-title">Neurology & Neurosurgery</h3>
-                            <p class="department-description">Our Neurology Department offers comprehensive care for disorders of the brain, spine, and nervous system with advanced diagnostic and therapeutic capabilities.</p>
-                            <div class="department-features">
-                                <h5>Services Offered:</h5>
-                                <ul>
-                                    <li>Stroke Management</li>
-                                    <li>Brain & Spine Surgery</li>
-                                    <li>Epilepsy Treatment</li>
-                                    <li>Neurological Rehabilitation</li>
-                                    <li>EEG & EMG Studies</li>
-                                    <li>Movement Disorder Clinic</li>
-                                </ul>
+                            <div class="department-header mb-4">
+                                <div class="department-icon-large bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-brain fa-lg"></i>
+                                </div>
+                                <h3 class="department-title d-inline-block">Neurology & Neurosurgery</h3>
                             </div>
-                            <div class="department-stats">
+                            <p class="department-description">Our Neurology Department offers comprehensive care for disorders of the brain, spine, and nervous system with advanced diagnostic and therapeutic capabilities. We provide multidisciplinary approach to neurological conditions, combining medical management with advanced surgical interventions when necessary. Our team includes neurologists, neurosurgeons, and rehabilitation specialists working together for optimal patient outcomes.</p>
+                            <div class="department-features mb-4">
+                                <h5>Advanced Neurological Services:</h5>
                                 <div class="row">
-                                    <div class="col-4">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><strong>Stroke Management:</strong> Comprehensive stroke care with thrombolysis</li>
+                                            <li><strong>Brain & Spine Surgery:</strong> Minimally invasive and complex procedures</li>
+                                            <li><strong>Epilepsy Treatment:</strong> Advanced monitoring and management</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><strong>Neurological Rehabilitation:</strong> Comprehensive recovery programs</li>
+                                            <li><strong>EEG & EMG Studies:</strong> Advanced neurophysiological testing</li>
+                                            <li><strong>Movement Disorder Clinic:</strong> Specialized Parkinson's care</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="department-stats bg-light p-4 rounded-3">
+                                <div class="row text-center">
+                                    <div class="col-md-3 col-6">
                                         <div class="stat">
-                                            <h4>300+</h4>
-                                            <p>Neurosurgeries</p>
+                                            <h4 class="text-primary">300+</h4>
+                                            <p>Neurosurgeries Performed</p>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-3 col-6">
                                         <div class="stat">
-                                            <h4>24/7</h4>
-                                            <p>Stroke Unit</p>
+                                            <h4 class="text-primary">24/7</h4>
+                                            <p>Stroke Unit Operation</p>
                                         </div>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-md-3 col-6">
                                         <div class="stat">
-                                            <h4>95%</h4>
-                                            <p>Recovery Rate</p>
+                                            <h4 class="text-primary">95%</h4>
+                                            <p>Patient Recovery Rate</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat">
+                                            <h4 class="text-primary">12+</h4>
+                                            <p>Neurology Experts</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 order-lg-1">
-                        <img src="images/neurology-department.jpg" alt="Neurology Department" class="img-fluid rounded-3 shadow">
-                    </div>
                 </div>
             </div>
 
-            <!-- Additional departments would follow the same pattern -->
             <!-- Pediatrics -->
             <div class="department-detail mb-5" id="pediatrics">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-12">
                         <div class="department-content">
-                            <h3 class="department-title">Pediatrics & Neonatology</h3>
-                            <p class="department-description">Comprehensive healthcare for children from birth through adolescence, with specialized neonatal intensive care for premature and critically ill newborns.</p>
-                            <div class="department-features">
-                                <h5>Services Offered:</h5>
-                                <ul>
-                                    <li>Level III NICU</li>
-                                    <li>Pediatric Surgery</li>
-                                    <li>Vaccination Services</li>
-                                    <li>Growth & Development Monitoring</li>
-                                    <li>Pediatric Emergency Care</li>
-                                    <li>Adolescent Medicine</li>
-                                </ul>
+                            <div class="department-header mb-4">
+                                <div class="department-icon-large bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-3" style="width: 60px; height: 60px;">
+                                    <i class="fas fa-baby fa-lg"></i>
+                                </div>
+                                <h3 class="department-title d-inline-block">Pediatrics & Neonatology</h3>
+                            </div>
+                            <p class="department-description">Comprehensive healthcare for children from birth through adolescence, with specialized neonatal intensive care for premature and critically ill newborns. Our pediatric department provides family-centered care in a child-friendly environment, addressing both common childhood illnesses and complex medical conditions. We emphasize preventive care, growth monitoring, and developmental support.</p>
+                            <div class="department-features mb-4">
+                                <h5>Pediatric & Neonatal Services:</h5>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><strong>Level III NICU:</strong> Advanced neonatal intensive care unit</li>
+                                            <li><strong>Pediatric Surgery:</strong> Specialized surgical care for children</li>
+                                            <li><strong>Vaccination Services:</strong> Complete immunization schedule</li>
+                                            <li><strong>Growth & Development Monitoring:</strong> Regular developmental assessments</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li><strong>Pediatric Emergency Care:</strong> 24/7 emergency services for children</li>
+                                            <li><strong>Adolescent Medicine:</strong> Specialized care for teenagers</li>
+                                            <li><strong>Pediatric Cardiology:</strong> Heart care for children</li>
+                                            <li><strong>Child Psychology Services:</strong> Mental health support</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="department-stats bg-light p-4 rounded-3">
+                                <div class="row text-center">
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat">
+                                            <h4 class="text-primary">Level III</h4>
+                                            <p>NICU Certification</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat">
+                                            <h4 class="text-primary">5000+</h4>
+                                            <p>Children Treated Annually</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat">
+                                            <h4 class="text-primary">15+</h4>
+                                            <p>Pediatric Specialists</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-6">
+                                        <div class="stat">
+                                            <h4 class="text-primary">24/7</h4>
+                                            <p>Pediatric Emergency</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <img src="images/pediatrics-department.jpg" alt="Pediatrics Department" class="img-fluid rounded-3 shadow">
                     </div>
                 </div>
             </div>
@@ -221,33 +294,67 @@
             <!-- Quick Department Links -->
             <div class="row g-4 mt-5">
                 <div class="col-lg-4 col-md-6">
-                    <div class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-bone"></i>
+                    <div class="department-card text-center p-4 border rounded-3 h-100">
+                        <div class="department-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-bone fa-2x"></i>
                         </div>
-                        <h5>Orthopedics</h5>
-                        <p>Complete orthopedic care including joint replacement and sports medicine.</p>
+                        <h5>Orthopedics & Joint Replacement</h5>
+                        <p class="mb-3">Complete orthopedic care including joint replacement, sports medicine, trauma surgery, and spinal procedures with advanced rehabilitation services.</p>
                         <a href="#orthopedics" class="btn btn-outline-primary btn-sm">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-lungs"></i>
+                    <div class="department-card text-center p-4 border rounded-3 h-100">
+                        <div class="department-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-lungs fa-2x"></i>
                         </div>
-                        <h5>Pulmonology</h5>
-                        <p>Advanced respiratory care with modern ventilation and sleep study facilities.</p>
+                        <h5>Pulmonology & Respiratory Medicine</h5>
+                        <p class="mb-3">Advanced respiratory care with modern ventilation, sleep study facilities, bronchoscopy, and comprehensive management of asthma, COPD, and lung diseases.</p>
                         <a href="#pulmonology" class="btn btn-outline-primary btn-sm">Learn More</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="department-card">
-                        <div class="department-icon">
-                            <i class="fas fa-eye"></i>
+                    <div class="department-card text-center p-4 border rounded-3 h-100">
+                        <div class="department-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-eye fa-2x"></i>
                         </div>
-                        <h5>Ophthalmology</h5>
-                        <p>Complete eye care services including cataract surgery and retinal treatments.</p>
+                        <h5>Ophthalmology & Retinal Services</h5>
+                        <p class="mb-3">Complete eye care services including cataract surgery, retinal treatments, corneal transplantation, glaucoma management, and pediatric ophthalmology.</p>
                         <a href="#ophthalmology" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Department Cards -->
+            <div class="row g-4 mt-2">
+                <div class="col-lg-4 col-md-6">
+                    <div class="department-card text-center p-4 border rounded-3 h-100">
+                        <div class="department-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-x-ray fa-2x"></i>
+                        </div>
+                        <h5>Radiology & Imaging</h5>
+                        <p class="mb-3">Advanced diagnostic imaging services including MRI, CT scan, ultrasound, digital X-ray, and interventional radiology procedures for accurate diagnosis.</p>
+                        <a href="#radiology" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="department-card text-center p-4 border rounded-3 h-100">
+                        <div class="department-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-flask fa-2x"></i>
+                        </div>
+                        <h5>Pathology & Laboratory</h5>
+                        <p class="mb-3">Comprehensive laboratory services including hematology, biochemistry, microbiology, histopathology, and molecular diagnostics with NABL accreditation.</p>
+                        <a href="#pathology" class="btn btn-outline-primary btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="department-card text-center p-4 border rounded-3 h-100">
+                        <div class="department-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
+                            <i class="fas fa-procedures fa-2x"></i>
+                        </div>
+                        <h5>General Surgery</h5>
+                        <p class="mb-3">Comprehensive surgical care including laparoscopic surgery, gastrointestinal surgery, breast surgery, and minimally invasive procedures with rapid recovery protocols.</p>
+                        <a href="#surgery" class="btn btn-outline-primary btn-sm">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -260,14 +367,10 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <img src="images/logo-white.jpg" alt="Manipal Teaching Hospital" class="footer-logo mb-3">
-                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="footer-logo-placeholder bg-white text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 50px; height: 50px;">
+                            <i class="fas fa-hospital"></i>
                         </div>
+                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990. Our commitment to quality care and medical innovation makes us a trusted healthcare provider in the region.</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">

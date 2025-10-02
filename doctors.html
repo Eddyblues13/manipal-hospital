@@ -23,7 +23,9 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.jpg" alt="Manipal Teaching Hospital" class="logo-img">
+                <div class="logo-placeholder bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width: 40px; height: 40px;">
+                    <i class="fas fa-hospital"></i>
+                </div>
                 <span class="brand-text">Manipal Teaching Hospital</span>
             </a>
             
@@ -118,12 +120,15 @@
                 <!-- Cardiology Doctors -->
                 <div class="col-lg-4 col-md-6 doctor-card" data-specialty="cardiology">
                     <div class="doctor-profile">
-                        <img src="images/doctor-1.jpg" alt="Dr. Rajesh Kumar" class="doctor-image">
+                        <div class="doctor-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100px; height: 100px;">
+                            <i class="fas fa-heartbeat fa-2x"></i>
+                        </div>
                         <div class="doctor-content">
                             <h5>Dr. Rajesh Kumar</h5>
                             <p class="doctor-specialty">Senior Cardiologist</p>
                             <p class="doctor-qualification">MBBS, MD, DM Cardiology</p>
                             <p class="doctor-experience">25+ years of experience</p>
+                            <p class="doctor-bio">Dr. Rajesh Kumar is a renowned cardiologist with extensive experience in interventional cardiology. He has performed over 5,000 cardiac procedures and is recognized for his expertise in complex coronary interventions.</p>
                             <div class="doctor-expertise">
                                 <span class="badge bg-primary">Interventional Cardiology</span>
                                 <span class="badge bg-primary">Cardiac Electrophysiology</span>
@@ -138,12 +143,15 @@
 
                 <div class="col-lg-4 col-md-6 doctor-card" data-specialty="cardiology">
                     <div class="doctor-profile">
-                        <img src="images/doctor-2.jpg" alt="Dr. Priya Sharma" class="doctor-image">
+                        <div class="doctor-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100px; height: 100px;">
+                            <i class="fas fa-heart fa-2x"></i>
+                        </div>
                         <div class="doctor-content">
                             <h5>Dr. Priya Sharma</h5>
                             <p class="doctor-specialty">Cardiac Surgeon</p>
                             <p class="doctor-qualification">MBBS, MS, MCh Cardio-Thoracic Surgery</p>
                             <p class="doctor-experience">20+ years of experience</p>
+                            <p class="doctor-bio">Dr. Priya Sharma is an accomplished cardiac surgeon specializing in complex heart surgeries. She has successfully performed over 2,000 open-heart procedures and is known for her precision and patient care.</p>
                             <div class="doctor-expertise">
                                 <span class="badge bg-primary">Bypass Surgery</span>
                                 <span class="badge bg-primary">Valve Replacement</span>
@@ -159,12 +167,15 @@
                 <!-- Neurology Doctors -->
                 <div class="col-lg-4 col-md-6 doctor-card" data-specialty="neurology">
                     <div class="doctor-profile">
-                        <img src="images/doctor-3.jpg" alt="Dr. Arun Patel" class="doctor-image">
+                        <div class="doctor-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100px; height: 100px;">
+                            <i class="fas fa-brain fa-2x"></i>
+                        </div>
                         <div class="doctor-content">
                             <h5>Dr. Arun Patel</h5>
                             <p class="doctor-specialty">Neurologist</p>
                             <p class="doctor-qualification">MBBS, MD, DM Neurology</p>
                             <p class="doctor-experience">18+ years of experience</p>
+                            <p class="doctor-bio">Dr. Arun Patel is a distinguished neurologist with special interest in stroke management and epilepsy. He has published numerous research papers in international journals and leads our stroke response team.</p>
                             <div class="doctor-expertise">
                                 <span class="badge bg-primary">Stroke Management</span>
                                 <span class="badge bg-primary">Epilepsy Treatment</span>
@@ -177,7 +188,77 @@
                     </div>
                 </div>
 
-                <!-- Additional doctors would follow the same pattern -->
+                <!-- Pediatrics Doctors -->
+                <div class="col-lg-4 col-md-6 doctor-card" data-specialty="pediatrics">
+                    <div class="doctor-profile">
+                        <div class="doctor-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100px; height: 100px;">
+                            <i class="fas fa-baby fa-2x"></i>
+                        </div>
+                        <div class="doctor-content">
+                            <h5>Dr. Anjali Mehta</h5>
+                            <p class="doctor-specialty">Pediatrician</p>
+                            <p class="doctor-qualification">MBBS, MD Pediatrics</p>
+                            <p class="doctor-experience">15+ years of experience</p>
+                            <p class="doctor-bio">Dr. Anjali Mehta is a compassionate pediatrician dedicated to child healthcare. She specializes in neonatal care and childhood diseases, with a gentle approach that puts both children and parents at ease.</p>
+                            <div class="doctor-expertise">
+                                <span class="badge bg-primary">Neonatal Care</span>
+                                <span class="badge bg-primary">Childhood Diseases</span>
+                            </div>
+                            <div class="doctor-actions mt-3">
+                                <a href="appointment.html" class="btn btn-primary btn-sm">Book Appointment</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#doctorModal4">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orthopedics Doctors -->
+                <div class="col-lg-4 col-md-6 doctor-card" data-specialty="orthopedics">
+                    <div class="doctor-profile">
+                        <div class="doctor-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100px; height: 100px;">
+                            <i class="fas fa-bone fa-2x"></i>
+                        </div>
+                        <div class="doctor-content">
+                            <h5>Dr. Sanjay Verma</h5>
+                            <p class="doctor-specialty">Orthopedic Surgeon</p>
+                            <p class="doctor-qualification">MBBS, MS Orthopedics</p>
+                            <p class="doctor-experience">22+ years of experience</p>
+                            <p class="doctor-bio">Dr. Sanjay Verma is an expert in joint replacement and sports medicine. He has performed over 1,500 joint replacement surgeries and works with athletes to help them recover from sports injuries.</p>
+                            <div class="doctor-expertise">
+                                <span class="badge bg-primary">Joint Replacement</span>
+                                <span class="badge bg-primary">Sports Medicine</span>
+                            </div>
+                            <div class="doctor-actions mt-3">
+                                <a href="appointment.html" class="btn btn-primary btn-sm">Book Appointment</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#doctorModal5">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pulmonology Doctors -->
+                <div class="col-lg-4 col-md-6 doctor-card" data-specialty="pulmonology">
+                    <div class="doctor-profile">
+                        <div class="doctor-icon bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 100px; height: 100px;">
+                            <i class="fas fa-lungs fa-2x"></i>
+                        </div>
+                        <div class="doctor-content">
+                            <h5>Dr. Neha Gupta</h5>
+                            <p class="doctor-specialty">Pulmonologist</p>
+                            <p class="doctor-qualification">MBBS, MD, DM Pulmonary Medicine</p>
+                            <p class="doctor-experience">16+ years of experience</p>
+                            <p class="doctor-bio">Dr. Neha Gupta specializes in respiratory diseases and critical care. She has extensive experience in managing complex respiratory conditions and leads our pulmonary function testing department.</p>
+                            <div class="doctor-expertise">
+                                <span class="badge bg-primary">Respiratory Diseases</span>
+                                <span class="badge bg-primary">Critical Care</span>
+                            </div>
+                            <div class="doctor-actions mt-3">
+                                <a href="appointment.html" class="btn btn-primary btn-sm">Book Appointment</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#doctorModal6">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -188,14 +269,10 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <div class="footer-brand">
-                        <img src="images/logo-white.jpg" alt="Manipal Teaching Hospital" class="footer-logo mb-3">
-                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
-                        <div class="social-links">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="footer-logo-placeholder bg-white text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 50px; height: 50px;">
+                            <i class="fas fa-hospital"></i>
                         </div>
+                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-6">
@@ -260,5 +337,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    
+    <script>
+        function filterDoctors() {
+            const filterValue = document.getElementById('specialtyFilter').value;
+            const doctorCards = document.querySelectorAll('.doctor-card');
+            
+            doctorCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-specialty') === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 </html>

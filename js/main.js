@@ -344,18 +344,18 @@ function shareContent(title, url) {
   }
 }
 
-// Cookie consent (basic implementation)
-function showCookieConsent() {
-  if (!localStorage.getItem("cookieConsent")) {
-    const consent = confirm("This website uses cookies to improve your experience. Do you accept?")
-    if (consent) {
-      localStorage.setItem("cookieConsent", "accepted")
-    }
-  }
-}
+// // Cookie consent (basic implementation)
+// function showCookieConsent() {
+//   if (!localStorage.getItem("cookieConsent")) {
+//     const consent = confirm("This website uses cookies to improve your experience. Do you accept?")
+//     if (consent) {
+//       localStorage.setItem("cookieConsent", "accepted")
+//     }
+//   }
+// }
 
-// Initialize cookie consent
-document.addEventListener("DOMContentLoaded", showCookieConsent)
+// // Initialize cookie consent
+// document.addEventListener("DOMContentLoaded", showCookieConsent)
 
 // Back to top button
 function addBackToTopButton() {
@@ -731,18 +731,18 @@ function shareContent(title, url) {
   }
 }
 
-// Cookie consent (basic implementation)
-function showCookieConsent() {
-  if (!localStorage.getItem("cookieConsent")) {
-    const consent = confirm("This website uses cookies to improve your experience. Do you accept?")
-    if (consent) {
-      localStorage.setItem("cookieConsent", "accepted")
-    }
-  }
-}
+// // Cookie consent (basic implementation)
+// function showCookieConsent() {
+//   if (!localStorage.getItem("cookieConsent")) {
+//     const consent = confirm("This website uses cookies to improve your experience. Do you accept?")
+//     if (consent) {
+//       localStorage.setItem("cookieConsent", "accepted")
+//     }
+//   }
+// }
 
-// Initialize cookie consent
-document.addEventListener("DOMContentLoaded", showCookieConsent)
+// // Initialize cookie consent
+// document.addEventListener("DOMContentLoaded", showCookieConsent)
 
 // Back to top button
 function addBackToTopButton() {
