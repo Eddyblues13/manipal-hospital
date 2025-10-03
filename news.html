@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - Manipal Teaching Hospital</title>
+    <meta name="description" content="Latest news, health updates, medical conferences, and events at Manipal Teaching Hospital.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #198754;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #0dcaf0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .section-title.text-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+        
+        /* Navigation */
+        #mainNav {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .brand-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding-top: 100px;
+            padding-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .breadcrumb {
+            background: transparent;
+        }
+        
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item.active {
+            color: white;
+        }
+        
+        /* News Cards */
+        .news-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 1.5rem;
+        }
+        
+        .news-date {
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .news-category {
+            display: inline-block;
+            background-color: rgba(13, 110, 253, 0.1);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .news-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .news-excerpt {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Featured News */
+        .featured-news {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+        
+        .featured-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .featured-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            padding: 2rem;
+            color: white;
+        }
+        
+        .featured-category {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        
+        .featured-title {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .featured-excerpt {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+        
+        /* Events */
+        .event-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+        
+        .event-date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            margin-right: 1.5rem;
+        }
+        
+        .event-day {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .event-month {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        
+        .event-content {
+            flex: 1;
+        }
+        
+        .event-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-meta {
+            display: flex;
+            gap: 1rem;
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-meta i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+        
+        /* Health Tips */
+        .tip-card {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tip-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .tip-icon i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .tip-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        /* Pagination */
+        .pagination .page-link {
+            color: var(--primary);
+            border: 1px solid #dee2e6;
+        }
+        
+        .pagination .page-item.active .page-link {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--primary);
+            color: white;
+            border-radius: 8px;
+            padding: 3rem 2rem;
+        }
+        
+        .newsletter-form .form-control {
+            border-radius: 6px 0 0 6px;
+            border: none;
+            padding: 0.75rem 1rem;
+        }
+        
+        .newsletter-form .btn {
+            border-radius: 0 6px 6px 0;
+            border: none;
+            padding: 0.75rem 1.5rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .footer-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--primary);
+            margin-top: 3px;
+        }
+        
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-legal a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header {
+                padding-top: 120px;
+                padding-bottom: 40px;
+            }
+            
+            .featured-image {
+                height: 300px;
+            }
+            
+            .featured-title {
+                font-size: 1.5rem;
+            }
+            
+            .event-date {
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+            }
+            
+            .footer-legal a {
+                margin-left: 0;
+                margin-right: 1.5rem;
+            }
+        }
+    </style>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="Manipal Teaching Hospital" class="logo-img">
+                <span class="brand-text">Manipal Teaching Hospital</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="departments.html">Departments</a></li>
+                            <li><a class="dropdown-item" href="services.html">Medical Services</a></li>
+                            <li><a class="dropdown-item" href="emergency.html">Emergency Care</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="patients.html">Patient Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="academics.html">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2" href="appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+  <!-- Page Header -->
+<section class="page-header bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 mb-3">News & Events</h1>
+                <p class="lead">Stay Updated with Our Latest Developments, Health Programs, and Achievements</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-lg-end">
+                        <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Home</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">News & Events</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured News -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title">Featured News</h2>
+        <div class="featured-news p-4 bg-light rounded shadow-sm">
+            <span class="featured-category d-block mb-2 text-primary fw-bold">Medical Technology</span>
+            <h2 class="featured-title">Advanced Robotic Surgery System Launched at Manipal Hospital</h2>
+            <p class="featured-excerpt">We are proud to announce the launch of our state-of-the-art robotic surgery system. This technology enables minimally invasive procedures with greater precision, shorter recovery times, and improved patient outcomes. Our team of specialists is among the first in the region to be trained on this advanced system.</p>
+            <a href="about.html" class="btn btn-primary">Read Full Story</a>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-lg-8">
+                <h2 class="section-title">Latest News</h2>
+
+                <div class="news-card p-4 mb-4 bg-white shadow-sm rounded">
+                    <div class="news-date fw-bold text-primary">March 15, 2024</div>
+                    <span class="news-category">Community Health</span>
+                    <h3 class="news-title mt-2">Free Health Camp in Rural Areas</h3>
+                    <p class="news-excerpt">Our medical team successfully conducted a free health camp in remote villages, providing screenings and consultations for over 500 patients. Services included blood pressure checks, diabetes testing, and maternal health education.</p>
+                    <a href="about.html" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+
+                <div class="news-card p-4 mb-4 bg-white shadow-sm rounded">
+                    <div class="news-date fw-bold text-primary">March 10, 2024</div>
+                    <span class="news-category">Medical Technology</span>
+                    <h3 class="news-title mt-2">Advanced Robotic Surgery System</h3>
+                    <p class="news-excerpt">We have introduced cutting-edge robotic surgical technology that allows greater precision in procedures, minimizing risks and recovery time for patients.</p>
+                    <a href="about.html" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+
+                <div class="news-card p-4 mb-4 bg-white shadow-sm rounded">
+                    <div class="news-date fw-bold text-primary">March 5, 2024</div>
+                    <span class="news-category">Medical Conference</span>
+                    <h3 class="news-title mt-2">International Medical Conference</h3>
+                    <p class="news-excerpt">Our hospital hosted the Annual South Asian Medical Conference, bringing together renowned specialists from across the region to discuss advancements in healthcare and medical education.</p>
+                    <a href="about.html" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+
+                <div class="news-card p-4 mb-4 bg-white shadow-sm rounded">
+                    <div class="news-date fw-bold text-primary">February 28, 2024</div>
+                    <span class="news-category">Cardiology</span>
+                    <h3 class="news-title mt-2">New Cardiac Catheterization Lab Inaugurated</h3>
+                    <p class="news-excerpt">Our hospital expanded its cardiac services with a new cath lab equipped with the latest technology for diagnosing and treating complex heart conditions.</p>
+                    <a href="about.html" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+
+                <div class="news-card p-4 mb-4 bg-white shadow-sm rounded">
+                    <div class="news-date fw-bold text-primary">February 20, 2024</div>
+                    <span class="news-category">Research</span>
+                    <h3 class="news-title mt-2">₹5 Crore Research Grant for Cancer Studies</h3>
+                    <p class="news-excerpt">The oncology department has received a major research grant to fund groundbreaking cancer treatment and prevention studies aimed at improving survival rates.</p>
+                    <a href="about.html" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+
+                <div class="news-card p-4 mb-4 bg-white shadow-sm rounded">
+                    <div class="news-date fw-bold text-primary">February 15, 2024</div>
+                    <span class="news-category">Health Awareness</span>
+                    <h3 class="news-title mt-2">Heart Health Awareness Campaign Launched</h3>
+                    <p class="news-excerpt">A month-long campaign has been launched to raise awareness about heart health, emphasizing prevention, healthy lifestyles, and early detection of cardiovascular disease.</p>
+                    <a href="about.html" class="btn btn-outline-primary btn-sm">Read More</a>
+                </div>
+
+                <!-- Pagination -->
+                <nav aria-label="News pagination" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a class="page-link">Previous</a></li>
+                        <li class="page-item active"><a class="page-link">1</a></li>
+                        <li class="page-item"><a class="page-link">2</a></li>
+                        <li class="page-item"><a class="page-link">3</a></li>
+                        <li class="page-item"><a class="page-link">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4">
+                <!-- Upcoming Events -->
+                <div class="mb-5">
+                    <h3 class="section-title">Upcoming Events</h3>
+                    <div class="event-card p-3 bg-white shadow-sm rounded mb-3">
+                        <h4>World TB Day Awareness Program</h4>
+                        <p><strong>Date:</strong> March 25, 2024 | <strong>Time:</strong> 10:00 AM - 2:00 PM | <strong>Venue:</strong> Hospital Auditorium</p>
+                        <p>A special awareness program on tuberculosis prevention and treatment, open to the public.</p>
+                    </div>
+
+                    <div class="event-card p-3 bg-white shadow-sm rounded mb-3">
+                        <h4>CPR Training Workshop</h4>
+                        <p><strong>Date:</strong> April 5, 2024 | <strong>Time:</strong> 9:00 AM - 1:00 PM | <strong>Venue:</strong> Simulation Center</p>
+                        <p>A free CPR training workshop for healthcare professionals and the community to improve emergency response skills.</p>
+                    </div>
+
+                    <div class="event-card p-3 bg-white shadow-sm rounded">
+                        <h4>Pediatric Health Check-up Camp</h4>
+                        <p><strong>Date:</strong> April 15, 2024 | <strong>Time:</strong> 8:00 AM - 4:00 PM | <strong>Venue:</strong> Pediatric OPD</p>
+                        <p>Free check-up camp for children with pediatric specialists, including nutrition and growth monitoring.</p>
+                    </div>
+                </div>
+
+                <!-- Health Tips -->
+                <div class="mb-5">
+                    <h3 class="section-title">Health Tips</h3>
+                    <div class="tip-card p-3 bg-white shadow-sm rounded mb-3">
+                        <h4>Regular Exercise</h4>
+                        <p>Aim for at least 30 minutes of moderate exercise daily to maintain heart health and boost energy levels.</p>
+                    </div>
+
+                    <div class="tip-card p-3 bg-white shadow-sm rounded mb-3">
+                        <h4>Balanced Diet</h4>
+                        <p>Include a variety of fruits, vegetables, whole grains, and lean proteins in your daily meals for better immunity.</p>
+                    </div>
+
+                    <div class="tip-card p-3 bg-white shadow-sm rounded">
+                        <h4>Adequate Sleep</h4>
+                        <p>Ensure 7-9 hours of quality sleep every night to support mental clarity, mood balance, and physical recovery.</p>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="newsletter bg-primary text-white p-4 rounded">
+                    <h3 class="mb-3">Subscribe to Our Newsletter</h3>
+                    <p class="text-white-50 mb-3">Get the latest news, health tips, and event updates directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-light" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Medical Achievements -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Medical Achievements</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="achievement-card text-center p-4 bg-light rounded shadow-sm">
+                    <h4>Best Teaching Hospital 2023</h4>
+                    <p>Awarded for excellence in medical education and patient care by the Healthcare Excellence Awards.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="achievement-card text-center p-4 bg-light rounded shadow-sm">
+                    <h4>NABH Re-accreditation</h4>
+                    <p>Successfully renewed NABH accreditation for maintaining the highest quality standards in healthcare delivery.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="achievement-card text-center p-4 bg-light rounded shadow-sm">
+                    <h4>Green Hospital Certification</h4>
+                    <p>Recognized for environmentally sustainable practices and energy-efficient hospital operations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="images/logo-white.jpg" alt="Manipal Teaching Hospital" class="footer-logo mb-3">
+                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Patient Care</h6>
+                    <ul class="footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="patients.html">Patient Information</a></li>
+                        <li><a href="emergency.html">Emergency Care</a></li>
+                        <li><a href="reports.html">Lab Reports</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="footer-title">Contact Information</h6>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Medical Center Road, Manipal, Karnataka 576104</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 820 2922201</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@manipalteachinghospital.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-ambulance"></i>
+                            <span>Emergency: +91 820 2922108</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 Manipal Teaching Hospital. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Simple newsletter form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForm = document.querySelector('.newsletter-form');
+            
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    
+                    if (emailInput.value && emailInput.checkValidity()) {
+                        // In a real application, you would submit the form data to a server
+                        alert('Thank you for subscribing to our newsletter!');
+                        emailInput.value = '';
+                    } else {
+                        alert('Please enter a valid email address.');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Manipal Teaching Hospital</title>
+    <meta name="description" content="Join our team at Manipal Teaching Hospital. Explore career opportunities in healthcare and medical education.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --primary-dark: #0b5ed7;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #198754;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --info: #0dcaf0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .section-title.text-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+        
+        /* Navigation */
+        #mainNav {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .brand-text {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link.active {
+            color: var(--primary) !important;
+        }
+        
+        /* Page Header */
+        .page-header {
+            padding-top: 100px;
+            padding-bottom: 50px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .breadcrumb {
+            background: transparent;
+        }
+        
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb-item.active {
+            color: white;
+        }
+        
+        /* Job Cards */
+        .job-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+        
+        .job-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #e9ecef;
+            background-color: var(--light);
+        }
+        
+        .job-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        .job-meta-item i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+        
+        .job-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .job-tag {
+            background-color: #e9ecef;
+            color: var(--dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .job-content {
+            padding: 1.5rem;
+        }
+        
+        .job-description {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .job-requirements {
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-requirements h6 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .job-requirements ul {
+            padding-left: 1.2rem;
+            margin-bottom: 0;
+        }
+        
+        .job-requirements li {
+            margin-bottom: 0.25rem;
+        }
+        
+        /* Benefits Section */
+        .benefit-card {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .benefit-icon i {
+            font-size: 1.75rem;
+            color: var(--primary);
+        }
+        
+        /* Application Form */
+        .application-form {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+        
+        .form-control, .form-select {
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ced4da;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 3rem;
+            color: rgba(13, 110, 253, 0.1);
+            position: absolute;
+            top: -1rem;
+            left: -0.5rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-avatar i {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .author-info h6 {
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .footer-title {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item i {
+            margin-right: 10px;
+            color: var(--primary);
+            margin-top: 3px;
+        }
+        
+        .footer-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+        
+        .footer-legal a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-legal a:hover {
+            color: white;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header {
+                padding-top: 120px;
+                padding-bottom: 40px;
+            }
+            
+            .job-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .footer-legal a {
+                margin-left: 0;
+                margin-right: 1.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.jpg" alt="Manipal Teaching Hospital" class="logo-img">
+                <span class="brand-text">Manipal Teaching Hospital</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="departments.html">Departments</a></li>
+                            <li><a class="dropdown-item" href="services.html">Medical Services</a></li>
+                            <li><a class="dropdown-item" href="emergency.html">Emergency Care</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Our Doctors</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="patients.html">Patient Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="academics.html">Academics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="careers.html">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white px-3 ms-2" href="appointment.html">Book Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-primary text-white py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-3">Careers</h1>
+                    <p class="lead">Join Our Team of Healthcare Professionals</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-lg-end">
+                            <li class="breadcrumb-item"><a href="index.html" class="text-white-50">Home</a></li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">Careers</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Current Openings -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Current Job Openings</h2>
+                <p class="section-subtitle">Explore opportunities to join our healthcare team</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Job 1 -->
+                <div class="col-lg-6">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Senior Consultant - Cardiology</h3>
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Manipal, Karnataka</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Full-time</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Posted 2 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-tags">
+                                <span class="job-tag">Cardiology</span>
+                                <span class="job-tag">Senior Level</span>
+                                <span class="job-tag">Patient Care</span>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            <p class="job-description">We are seeking an experienced Senior Consultant in Cardiology to lead our cardiac care unit and provide expert consultation for complex cardiac cases.</p>
+                            <div class="job-requirements">
+                                <h6>Requirements:</h6>
+                                <ul>
+                                    <li>MD/DM in Cardiology with 8+ years of experience</li>
+                                    <li>Expertise in interventional cardiology procedures</li>
+                                    <li>Strong leadership and team management skills</li>
+                                    <li>Excellent communication and patient interaction abilities</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#apply-now" class="btn btn-primary">Apply Now</a>
+                                <a href="job-details.html" class="text-primary text-decoration-none">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Job 2 -->
+                <div class="col-lg-6">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Staff Nurse - ICU</h3>
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Manipal, Karnataka</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Full-time</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Posted 5 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-tags">
+                                <span class="job-tag">Nursing</span>
+                                <span class="job-tag">ICU</span>
+                                <span class="job-tag">Critical Care</span>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            <p class="job-description">We're looking for dedicated Staff Nurses to join our Intensive Care Unit team, providing critical care to patients with life-threatening conditions.</p>
+                            <div class="job-requirements">
+                                <h6>Requirements:</h6>
+                                <ul>
+                                    <li>B.Sc Nursing or GNM with valid registration</li>
+                                    <li>2+ years of experience in ICU/Critical Care</li>
+                                    <li>Certification in ACLS/BLS preferred</li>
+                                    <li>Strong critical thinking and decision-making skills</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#apply-now" class="btn btn-primary">Apply Now</a>
+                                <a href="job-details.html" class="text-primary text-decoration-none">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Job 3 -->
+                <div class="col-lg-6">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Medical Laboratory Technologist</h3>
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Manipal, Karnataka</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Full-time</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Posted 1 week ago</span>
+                                </div>
+                            </div>
+                            <div class="job-tags">
+                                <span class="job-tag">Laboratory</span>
+                                <span class="job-tag">Diagnostics</span>
+                                <span class="job-tag">Technology</span>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            <p class="job-description">Join our diagnostic team as a Medical Laboratory Technologist to perform complex medical tests and analyses to aid in patient diagnosis and treatment.</p>
+                            <div class="job-requirements">
+                                <h6>Requirements:</h6>
+                                <ul>
+                                    <li>B.Sc in Medical Laboratory Technology or equivalent</li>
+                                    <li>3+ years of experience in clinical laboratory</li>
+                                    <li>Proficiency in laboratory information systems</li>
+                                    <li>Knowledge of quality control and assurance procedures</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#apply-now" class="btn btn-primary">Apply Now</a>
+                                <a href="job-details.html" class="text-primary text-decoration-none">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Job 4 -->
+                <div class="col-lg-6">
+                    <div class="job-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Administrative Executive</h3>
+                            <div class="job-meta">
+                                <div class="job-meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Manipal, Karnataka</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Full-time</span>
+                                </div>
+                                <div class="job-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span>Posted 3 days ago</span>
+                                </div>
+                            </div>
+                            <div class="job-tags">
+                                <span class="job-tag">Administration</span>
+                                <span class="job-tag">Management</span>
+                                <span class="job-tag">Healthcare</span>
+                            </div>
+                        </div>
+                        <div class="job-content">
+                            <p class="job-description">We're seeking an Administrative Executive to manage hospital operations, coordinate between departments, and ensure efficient administrative functioning.</p>
+                            <div class="job-requirements">
+                                <h6>Requirements:</h6>
+                                <ul>
+                                    <li>MBA in Hospital Administration or related field</li>
+                                    <li>3+ years of healthcare administration experience</li>
+                                    <li>Strong organizational and communication skills</li>
+                                    <li>Proficiency in hospital management software</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="#apply-now" class="btn btn-primary">Apply Now</a>
+                                <a href="job-details.html" class="text-primary text-decoration-none">View Details <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="all-jobs.html" class="btn btn-outline-primary btn-lg">View All Open Positions</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Why Work With Us</h2>
+                <p class="section-subtitle">Join a team dedicated to excellence in healthcare</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Professional Growth</h4>
+                        <p>Continuous learning opportunities, training programs, and career advancement pathways to help you grow professionally.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h4>Work-Life Balance</h4>
+                        <p>Flexible scheduling options and supportive work environment that values your personal time and well-being.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>Competitive Compensation</h4>
+                        <p>Attractive salary packages, performance bonuses, and comprehensive benefits for all our employees.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Collaborative Environment</h4>
+                        <p>Work alongside experienced professionals in a team-oriented culture that fosters collaboration and innovation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h4>Advanced Technology</h4>
+                        <p>Access to state-of-the-art medical equipment and technology to deliver the highest standard of patient care.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4>Meaningful Work</h4>
+                        <p>Make a real difference in patients' lives while working in a prestigious healthcare institution with a strong reputation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employee Testimonials -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What Our Employees Say</h2>
+                <p class="section-subtitle">Hear from our team members about their experience</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            Working at Manipal Teaching Hospital has been a rewarding experience. The supportive environment and opportunities for professional growth have helped me advance my career while making a meaningful impact on patient care.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <div class="author-info">
+                                <h6>Dr. Priya Sharma</h6>
+                                <p>Senior Consultant, Pediatrics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            The collaborative culture here is exceptional. I've had the opportunity to work with some of the best healthcare professionals and learn from their expertise. The hospital's commitment to innovation keeps me engaged and motivated.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user-nurse"></i>
+                            </div>
+                            <div class="author-info">
+                                <h6>Anita Reddy</h6>
+                                <p>Head Nurse, Cardiology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-text">
+                            What I appreciate most about working here is the work-life balance. The administration genuinely cares about employee well-being while maintaining high standards of patient care. It's the perfect environment for professional growth.
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="author-info">
+                                <h6>Rajesh Kumar</h6>
+                                <p>Lab Manager, Pathology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section class="py-5 bg-light" id="apply-now">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="application-form">
+                        <div class="text-center mb-5">
+                            <h2 class="section-title">Apply Now</h2>
+                            <p class="section-subtitle">Submit your application to join our team</p>
+                        </div>
+                        
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="position" class="form-label">Position Applying For</label>
+                                    <select class="form-select" id="position" required>
+                                        <option value="" selected disabled>Select a position</option>
+                                        <option value="senior-consultant-cardiology">Senior Consultant - Cardiology</option>
+                                        <option value="staff-nurse-icu">Staff Nurse - ICU</option>
+                                        <option value="medical-lab-technologist">Medical Laboratory Technologist</option>
+                                        <option value="administrative-executive">Administrative Executive</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="experience" class="form-label">Years of Experience</label>
+                                    <select class="form-select" id="experience" required>
+                                        <option value="" selected disabled>Select experience level</option>
+                                        <option value="0-2">0-2 years</option>
+                                        <option value="3-5">3-5 years</option>
+                                        <option value="6-10">6-10 years</option>
+                                        <option value="10+">10+ years</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="resume" class="form-label">Upload Resume</label>
+                                    <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx" required>
+                                    <div class="form-text">Accepted formats: PDF, DOC, DOCX (Max size: 5MB)</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="coverLetter" class="form-label">Cover Letter</label>
+                                    <textarea class="form-control" id="coverLetter" rows="4" placeholder="Tell us why you're interested in this position..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="consent" required>
+                                        <label class="form-check-label" for="consent">
+                                            I consent to the processing of my personal data for recruitment purposes.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">Submit Application</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="images/logo-white.jpg" alt="Manipal Teaching Hospital" class="footer-logo mb-3">
+                        <p>Excellence in Healthcare & Medical Education. Serving our community with compassion and expertise since 1990.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="doctors.html">Our Doctors</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title">Patient Care</h6>
+                    <ul class="footer-links">
+                        <li><a href="appointment.html">Book Appointment</a></li>
+                        <li><a href="patients.html">Patient Information</a></li>
+                        <li><a href="emergency.html">Emergency Care</a></li>
+                        <li><a href="reports.html">Lab Reports</a></li>
+                        <li><a href="insurance.html">Insurance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="footer-title">Contact Information</h6>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Medical Center Road, Manipal, Karnataka 576104</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 820 2922201</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@manipalteachinghospital.com</span>
+                        </div>
+                        <div class="contact-item emergency">
+                            <i class="fas fa-ambulance"></i>
+                            <span>Emergency: +91 820 2922108</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; 2025 Manipal Teaching Hospital. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="footer-legal">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="sitemap.html">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Simple form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const applicationForm = document.querySelector('form');
+            
+            if (applicationForm) {
+                applicationForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Basic validation
+                    const requiredFields = applicationForm.querySelectorAll('[required]');
+                    let isValid = true;
+                    
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('is-invalid');
+                        } else {
+                            field.classList.remove('is-invalid');
+                        }
+                    });
+                    
+                    if (isValid) {
+                        // In a real application, you would submit the form data to a server
+                        alert('Thank you for your application! We will review your submission and contact you soon.');
+                        applicationForm.reset();
+                    } else {
+                        alert('Please fill in all required fields.');
+                    }
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
